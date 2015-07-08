@@ -9,7 +9,7 @@
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
-(dolist (pkg '(js2-modoe web-mode json-mode markdown-mode))
+(dolist (pkg '(js2-mode web-mode json-mode markdown-mode))
   (when (and (not (package-installed-p pkg))
 	     (assoc pkg package-archive-contents))
     (package-install pkg)))
