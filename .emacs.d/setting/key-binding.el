@@ -1,4 +1,21 @@
-;(global-set-key "\C-x\ \C-m" 'execute-extended-command)
-;(global-set-key "\C-w" 'backward-kill-word)
-
 (provide 'key-binding)
+
+;cut
+(global-set-key "\C-x" 'kill-region)
+
+;copy
+(global-set-key "\C-c" 'kill-ring-save)
+
+;paste
+(global-set-key "\C-v" 'yank)
+
+;select all
+(global-set-key "\C-a" 'mark-whole-buffer)
+
+;undo
+(global-set-key "\C-z" 'undo)
+
+;save
+(global-set-key "\C-s" 'save-buffer)
+
+

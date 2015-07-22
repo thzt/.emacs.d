@@ -1,3 +1,4 @@
+(provide 'global-setting)
 
 ;不显示启动画面
 (custom-set-variables '(inhibit-startup-screen 1))
@@ -34,5 +35,3 @@
 
 ;把回答yes/no改成y/n
 (fset 'yes-or-no-p 'y-or-n-p)
-
-(provide 'global-setting)
