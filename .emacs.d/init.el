@@ -4,3 +4,6 @@
 
 ;加载global-setting模块
 (require 'global-setting)
+
+;加载key-binding模块
+(require 'key-binding)

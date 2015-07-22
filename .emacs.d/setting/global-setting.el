@@ -20,6 +20,9 @@
 ;关闭工具栏
 (tool-bar-mode -1)
 
+;关闭菜单栏
+;(menu-bar-mode -1)
+
 ;设置标题为文件名
 (setq frame-title-format "%b")
 
