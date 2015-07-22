@@ -26,4 +26,13 @@
 ;设置标题为文件名
 (setq frame-title-format "%b")
 
+;显示行号
+(line-number-mode 1)
+
+;显示列号
+(column-number-mode 1)
+
+;把回答yes/no改成y/n
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (provide 'global-setting)
