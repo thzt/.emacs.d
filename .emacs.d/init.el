@@ -1,20 +1,6 @@
-;;;; install package
 
-(require 'package)
+;添加搜索模块的目录
+(add-to-list 'load-path "~/.emacs.d/setting/")
 
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-
-(package-initialize)
-(when (not package-archive-contents)
-  (package-refresh-contents))
-(dolist (pkg '(js2-mode web-mode json-mode markdown-mode))
-  (when (and (not (package-installed-p pkg))
-	     (assoc pkg package-archive-contents))
-    (package-install pkg)))
-
-;;;; config setting
-	
-(add-to-list 'load-path "~/.emacs.d/setting")
+;加载global-setting模块
 (require 'global-setting)
