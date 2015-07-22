@@ -3,7 +3,7 @@
 (custom-set-variables '(inhibit-startup-screen 1))
 
 ;光标不闪烁
-(blink-cursor-mode -1)
+;(blink-cursor-mode -1)
 
 ;设置光标为竖线
 (setq-default cursor-type 'bar)

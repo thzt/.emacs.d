@@ -7,3 +7,8 @@
 
 ;加载key-binding模块
 (require 'key-binding)
+
+;加载scheme模块
+(require 'scheme-module)
+
+
