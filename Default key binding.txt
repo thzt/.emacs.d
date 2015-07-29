@@ -30,3 +30,9 @@ close other window: C-x 1
 switch window: C-x o
 
 M-x list-packages
+
+eval: C-x C-e
+show key translation: C-h b
+
+next page: C-v
+previous page: M-v
