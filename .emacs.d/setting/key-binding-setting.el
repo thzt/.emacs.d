@@ -1,4 +1,4 @@
-(provide 'key-binding)
+(provide 'key-binding-setting)
 
 ;ºÙ«–
 ;(global-set-key "\C-x" 'kill-region)

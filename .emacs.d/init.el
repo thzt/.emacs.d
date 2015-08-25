@@ -18,10 +18,16 @@
 (require 'global-setting)
 
 ;加载key-binding模块
-(require 'key-binding)
+(require 'key-binding-setting)
 
 ;加载scheme模块
-(require 'scheme-module)
+(require 'scheme-module-setting)
+
+;加载popup模块
+(require 'popup-setting)
+
+;加载auto-complete模块
+(require 'auto-complete-setting)
 
 
 
@@ -30,4 +36,3 @@
 
 ;载入主题
 (load-theme 'Darkula t)
-
