@@ -22,3 +22,26 @@
 ;使用基本配置
 (ac-config-default)
 
+
+
+;添加js2-mode包安装路径
+(add-to-list 'load-path "~/.emacs.d/package/js2-mode")
+
+;导入js2-mode包
+(require 'js2-mode)
+
+;对于js文件自动启用js2-mode
+(add-to-list 'auto-mode-alist 
+	     '("\\.js\\'" . js2-mode))
+
+
+
+;添加js2-mode包安装路径
+(add-to-list 'load-path "~/.emacs.d/package/markdown-mode")
+
+;导入markdown-mode包
+(require 'markdown-mode)
+
+;对于md文件自动启用markdown-mode
+(add-to-list 'auto-mode-alist 
+	     '("\\.md\\'" . markdown-mode))
