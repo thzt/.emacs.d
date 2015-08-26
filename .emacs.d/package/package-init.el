@@ -2,7 +2,7 @@
 
 
 
-;添加包安装路径
+;添加popup包安装路径
 (add-to-list 'load-path "~/.emacs.d/package/popup")
 
 ;导入popup包
@@ -10,7 +10,7 @@
 
 
 
-;添加包安装路径
+;添加auto-complete包安装路径
 (add-to-list 'load-path "~/.emacs.d/package/auto-complete")
 
 ;导入auto-complete包
