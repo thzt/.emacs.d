@@ -1,4 +1,14 @@
-(provide 'auto-complete-setting)
+(provide 'package-init)
+
+
+
+;添加包安装路径
+(add-to-list 'load-path "~/.emacs.d/package/popup")
+
+;导入popup包
+(require 'popup)
+
+
 
 ;添加包安装路径
 (add-to-list 'load-path "~/.emacs.d/package/auto-complete")
@@ -11,3 +21,4 @@
 
 ;使用基本配置
 (ac-config-default)
+

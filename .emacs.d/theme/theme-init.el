@@ -1,4 +1,4 @@
-(provide 'theme-setting)
+(provide 'theme-init)
 
 ;启用词法作用域
 (setq lexical-binding t)
