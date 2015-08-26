@@ -1,7 +1,15 @@
 (provide 'theme-setting)
 
-;添加主题搜索目录
-(add-to-list 'custom-theme-load-path "~/.emacs.d/theme/")
+;启用词法作用域
+(setq lexical-binding t)
 
-;载入主题
-(load-theme 'Darkula t)
+;设置主题
+;zenburn Darkula solarized
+(let ((theme 'zenburn))
+
+  ;添加主题安装路径
+  (add-to-list 'custom-theme-load-path
+	        (concat "~/.emacs.d/theme/"
+			(symbol-name theme)))
+  ;载入主题
+  (load-theme theme t))
