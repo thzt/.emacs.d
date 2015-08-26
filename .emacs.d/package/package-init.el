@@ -13,6 +13,11 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;安装neotree
+(add-to-list 'load-path "~/.emacs.d/package/neotree")
+(require 'neotree)
+(global-set-key [C-f8] 'neotree-toggle)
+
 ;安装支持的语言模式
 (dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]
 			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
