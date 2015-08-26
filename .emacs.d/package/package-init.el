@@ -14,8 +14,8 @@
 ;安装neotree
 (add-to-list 'load-path "~/.emacs.d/package/neotree")
 (require 'neotree)
-(global-set-key [C-f8] 'neotree-toggle)
-(global-set-key [C-f5] 
+(global-set-key (kbd "C-<f8>") 'neotree-toggle)
+(global-set-key (kbd "C-<f5>") 
 		(lambda ()
 		  (interactive)
 		  (neotree-dir default-directory)))
