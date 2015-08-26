@@ -1,41 +1,37 @@
 (provide 'package-init)
 
-;添加包的安装路径
-;(add-to-list 'load-path "~/.emacs.d/package/...")
+;启用词法作用域
+(setq lexical-binding t)
 
-;导入安装包
-;(require ...)
-
-;对于.xx文件自动启用xx-mode
-;(add-to-list 'auto-mode-alist 
-;	     '("\\.xx\\'" . xx-mode))
-
-
-
+;安装popup，auto-complete依赖项
 (add-to-list 'load-path "~/.emacs.d/package/popup")
 (require 'popup)
 
+;安装auto-complete
 (add-to-list 'load-path "~/.emacs.d/package/auto-complete")
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 
-(add-to-list 'load-path "~/.emacs.d/package/js2-mode")
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist 
-	     '("\\.js\\'" . js2-mode))
+;安装支持的语言模式
+(dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]
+			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
+			 ["python-mode" python "\\.py\\'" python-mode]
+			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
+			 ["php-mode" php-mode "\\.php\\'" php-mode]))
 
-(add-to-list 'load-path "~/.emacs.d/package/markdown-mode")
-(require 'markdown-mode)
-(add-to-list 'auto-mode-alist 
-	     '("\\.md\\'" . markdown-mode))
+  (let ((folder-name (elt language-mode 0))
+	(package (elt language-mode 1))
+	(file (elt language-mode 2))
+	(mode (elt language-mode 3)))
 
-(add-to-list 'load-path "~/.emacs.d/package/python")
-(require 'python)
-(add-to-list 'auto-mode-alist 
-	     '("\\.py\\'" . python-mode))
+    ;添加包的安装路径
+    (add-to-list 'load-path 
+		 (concat "~/.emacs.d/package/" folder-name))
 
-(add-to-list 'load-path "~/.emacs.d/package/haskell-mode")
-(require 'haskell)
-'(add-to-list 'auto-mode-alist 
-	     '("\\.hs\\'" . haskell-mode))
+    ;导入安装包
+    (require package)
+
+    ;对于.xx文件自动启用xx-mode
+    (add-to-list 'auto-mode-alist 
+	     `(,file . ,mode))))
