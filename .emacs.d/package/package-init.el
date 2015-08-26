@@ -30,7 +30,7 @@
 (add-to-list 'auto-mode-alist 
 	     '("\\.md\\'" . markdown-mode))
 
-(add-to-list 'load-path "~/.emacs.d/package/haskell-mode")
-;(require 'haskell-mode)
-;(add-to-list 'auto-mode-alist 
-;	     '("\\.hs\\'" . haskell-mode))
+(add-to-list 'load-path "~/.emacs.d/package/python")
+(require 'python)
+(add-to-list 'auto-mode-alist 
+	     '("\\.py\\'" . python-mode))
