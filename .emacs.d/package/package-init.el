@@ -21,12 +21,13 @@
 		  (neotree-dir default-directory)))
 
 ;安装支持的语言模式
-(dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]
+(dolist (language-mode '(
+			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
 			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
 			 ["python-mode" python "\\.py\\'" python-mode]
 			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
 			 ["php-mode" php-mode "\\.php\\'" php-mode]
-			 ["emmet-mode" emmet-mode "\\.html\\'" emmet-mode]
+			 ["emmet-mode" emmet-mode "\\.html\\'" html-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
 			 ))
 
@@ -45,6 +46,9 @@
     ;对于.xx文件自动启用xx-mode
     (add-to-list 'auto-mode-alist 
 	     `(,file . ,mode))))
+
+;按文件后缀自动加载emmet-mode，会整个替换html-mode，只能用html-mode-hook来做
+(add-hook 'html-mode-hook 'emmet-mode)
 
 ;打包
 (provide 'package-init)
