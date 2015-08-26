@@ -26,10 +26,13 @@
 (setq frame-title-format "%b")
 
 ;显示行号
-(line-number-mode 1)
+(line-number-mode)
 
 ;显示列号
-(column-number-mode 1)
+(column-number-mode)
+
+;全局显示行号
+(global-linum-mode)
 
 ;把回答yes/no改成y/n
 (fset 'yes-or-no-p 'y-or-n-p)
