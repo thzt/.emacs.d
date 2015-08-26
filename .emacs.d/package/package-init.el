@@ -24,9 +24,11 @@
 (dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]
 			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
 			 ["python-mode" python "\\.py\\'" python-mode]
-			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
+			 ;["haskell-mode" haskell "\\.hs\\'" haskell-mode]
 			 ["php-mode" php-mode "\\.php\\'" php-mode]
-			 ["emmet-mode" emmet-mode "\\.html\\'" emmet-mode]))
+			 ["emmet-mode" emmet-mode "\\.html\\'" emmet-mode]
+			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
+			 ))
 
   (let ((folder-name (elt language-mode 0))
 	(package (elt language-mode 1))
