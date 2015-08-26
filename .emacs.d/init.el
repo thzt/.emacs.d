@@ -1,5 +1,4 @@
-
-;Ìí¼ÓËÑË÷Ä£¿éµÄÄ¿Â¼
+;æ·»åŠ æœç´¢æ¨¡å—çš„ç›®å½•
 (add-to-list 'load-path "~/.emacs.d/setting/")
 
 (dolist (setting '(global-setting

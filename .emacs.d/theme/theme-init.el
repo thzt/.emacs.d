@@ -1,15 +1,15 @@
 (provide 'theme-init)
 
-;ÆôÓÃ´Ê·¨×÷ÓÃÓò
+;å¯ç”¨è¯æ³•ä½œç”¨åŸŸ
 (setq lexical-binding t)
 
-;ÉèÖÃÖ÷Ìâ
+;è®¾ç½®ä¸»é¢˜
 ;zenburn Darkula solarized
 (let ((theme 'zenburn))
 
-  ;Ìí¼ÓÖ÷Ìâ°²×°Â·¾¶
+  ;æ·»åŠ ä¸»é¢˜å®‰è£…è·¯å¾„
   (add-to-list 'custom-theme-load-path
 	        (concat "~/.emacs.d/theme/"
 			(symbol-name theme)))
-  ;ÔØÈëÖ÷Ìâ
+  ;è½½å…¥ä¸»é¢˜
   (load-theme theme t))

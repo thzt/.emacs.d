@@ -1,21 +1,21 @@
 (provide 'key-binding-setting)
 
-;¼ôÇĞ
+;å‰ªåˆ‡
 ;(global-set-key "\C-x" 'kill-region)
 
-;¸´ÖÆ
+;å¤åˆ¶
 ;(global-set-key "\C-c" 'kill-ring-save)
 
-;Õ³Ìù
+;ç²˜è´´
 ;(global-set-key "\C-v" 'yank)
 
-;È«Ñ¡
+;å…¨é€‰
 ;(global-set-key "\C-a" 'mark-whole-buffer)
 
-;³·Ïú
+;æ’¤é”€
 ;(global-set-key "\C-z" 'undo)
 
-;±£´æ
+;ä¿å­˜
 ;(global-set-key "\C-s" 'save-buffer)
 
 

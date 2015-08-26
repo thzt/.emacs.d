@@ -1,40 +1,40 @@
 (provide 'global-setting)
 
-;²»ÏÔÊ¾Æô¶¯»­Ãæ
+;ä¸æ˜¾ç¤ºå¯åŠ¨ç”»é¢
 (custom-set-variables '(inhibit-startup-screen 1))
 
-;¹â±ê²»ÉÁË¸
+;å…‰æ ‡ä¸é—ªçƒ
 ;(blink-cursor-mode -1)
 
-;ÉèÖÃ¹â±êÎªÊúÏß
+;è®¾ç½®å…‰æ ‡ä¸ºç«–çº¿
 (setq-default cursor-type 'bar)
 
-;ÏÔÊ¾Æ¥ÅäÀ¨ºÅ
+;æ˜¾ç¤ºåŒ¹é…æ‹¬å·
 (show-paren-mode 1)
 
-;¹Ø±Õ×Ô¶¯±£´æ
+;å…³é—­è‡ªåŠ¨ä¿å­˜
 (setq auto-save-default nil)
 
-;¹Ø±Õ×Ô¶¯±¸·İ
+;å…³é—­è‡ªåŠ¨å¤‡ä»½
 (setq make-backup-files nil)
 
-;¹Ø±Õ¹¤¾ßÀ¸
+;å…³é—­å·¥å…·æ 
 (tool-bar-mode -1)
 
-;¹Ø±Õ²Ëµ¥À¸
+;å…³é—­èœå•æ 
 ;(menu-bar-mode -1)
 
-;ÉèÖÃ±êÌâÎªÎÄ¼şÃû
+;è®¾ç½®æ ‡é¢˜ä¸ºæ–‡ä»¶å
 (setq frame-title-format "%b")
 
-;ÏÔÊ¾ĞĞºÅ
+;æ˜¾ç¤ºè¡Œå·
 (line-number-mode 1)
 
-;ÏÔÊ¾ÁĞºÅ
+;æ˜¾ç¤ºåˆ—å·
 (column-number-mode 1)
 
-;°Ñ»Ø´ğyes/no¸Ä³Éy/n
+;æŠŠå›ç­”yes/noæ”¹æˆy/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;ÉèÖÃ×Ö·û¼¯
+;è®¾ç½®å­—ç¬¦é›†
 (set-language-environment "UTF-8")

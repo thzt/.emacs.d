@@ -1,6 +1,6 @@
 (provide 'package-setting)
 
-;Ôö¼Ó°üµÄËÑË÷ÍøÖ·
+;å¢åŠ åŒ…çš„æœç´¢ç½‘å€
 (require 'package)
 (add-to-list 'package-archives'
 	     ("elpa" . "http://tromey.com/elpa/") t)
@@ -10,6 +10,6 @@
 	     ("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;Ìí¼Ó±¾µØ°ü°²×°Â·¾¶
+;æ·»åŠ æœ¬åœ°åŒ…å®‰è£…è·¯å¾„
 (add-to-list 'load-path "~/.emacs.d/package/")
 (add-to-list 'load-path "~/.emacs.d/theme/")

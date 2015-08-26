@@ -1,4 +1,4 @@
 (provide 'scheme-module-setting)
 
-;设置解释器为petite
+;璁剧疆瑙ｉ噴鍣ㄤ负petite
 (setq scheme-program-name "petite")

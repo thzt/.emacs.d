@@ -1,25 +1,28 @@
 (provide 'package-init)
 
-;ÆôÓÃ´Ê·¨×÷ÓÃÓò
+;å¯ç”¨è¯æ³•ä½œç”¨åŸŸ
 (setq lexical-binding t)
 
-;°²×°popup£¬auto-completeÒÀÀµÏî
+;å®‰è£…popupï¼Œauto-completeä¾èµ–é¡¹
 (add-to-list 'load-path "~/.emacs.d/package/popup")
 (require 'popup)
 
-;°²×°auto-complete
+;å®‰è£…auto-complete
 (add-to-list 'load-path "~/.emacs.d/package/auto-complete")
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 
-;°²×°neotree
+;å®‰è£…neotree
 (add-to-list 'load-path "~/.emacs.d/package/neotree")
 (require 'neotree)
 (global-set-key [C-f8] 'neotree-toggle)
-(global-set-key [C-f5] 'neotree-dir)
+(global-set-key [C-f5] 
+		(lambda ()
+		  (interactive)
+		  (neotree-dir default-directory)))
 
-;°²×°Ö§³ÖµÄÓïÑÔÄ£Ê½
+;å®‰è£…æ”¯æŒçš„è¯­è¨€æ¨¡å¼
 (dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]
 			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
 			 ["python-mode" python "\\.py\\'" python-mode]
@@ -31,13 +34,13 @@
 	(file (elt language-mode 2))
 	(mode (elt language-mode 3)))
 
-    ;Ìí¼Ó°üµÄ°²×°Â·¾¶
+    ;æ·»åŠ åŒ…çš„å®‰è£…è·¯å¾„
     (add-to-list 'load-path 
 		 (concat "~/.emacs.d/package/" folder-name))
 
-    ;µ¼Èë°²×°°ü
+    ;å¯¼å…¥å®‰è£…åŒ…
     (require package)
 
-    ;¶ÔÓÚ.xxÎÄ¼ş×Ô¶¯ÆôÓÃxx-mode
+    ;å¯¹äº.xxæ–‡ä»¶è‡ªåŠ¨å¯ç”¨xx-mode
     (add-to-list 'auto-mode-alist 
 	     `(,file . ,mode))))
