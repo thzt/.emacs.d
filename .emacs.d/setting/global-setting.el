@@ -1,5 +1,3 @@
-(provide 'global-setting)
-
 ;不显示启动画面
 (custom-set-variables '(inhibit-startup-screen 1))
 
@@ -38,3 +36,6 @@
 
 ;设置字符集
 (set-language-environment "UTF-8")
+
+;打包
+(provide 'global-setting)

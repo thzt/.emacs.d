@@ -1,5 +1,3 @@
-(provide 'package-init)
-
 ;启用词法作用域
 (setq lexical-binding t)
 
@@ -44,3 +42,6 @@
     ;对于.xx文件自动启用xx-mode
     (add-to-list 'auto-mode-alist 
 	     `(,file . ,mode))))
+
+;打包
+(provide 'package-init)

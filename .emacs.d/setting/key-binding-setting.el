@@ -1,5 +1,3 @@
-(provide 'key-binding-setting)
-
 ;剪切
 ;(global-set-key "\C-x" 'kill-region)
 
@@ -17,5 +15,8 @@
 
 ;保存
 ;(global-set-key "\C-s" 'save-buffer)
+
+;打包
+(provide 'key-binding-setting)
 
 

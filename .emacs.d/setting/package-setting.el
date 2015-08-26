@@ -1,5 +1,3 @@
-(provide 'package-setting)
-
 ;增加包的搜索网址
 (require 'package)
 (add-to-list 'package-archives'
@@ -13,3 +11,6 @@
 ;添加本地包安装路径
 (add-to-list 'load-path "~/.emacs.d/package/")
 (add-to-list 'load-path "~/.emacs.d/theme/")
+
+;打包
+(provide 'package-setting)

@@ -1,5 +1,3 @@
-(provide 'theme-init)
-
 ;启用词法作用域
 (setq lexical-binding t)
 
@@ -13,3 +11,6 @@
 			(symbol-name theme)))
   ;载入主题
   (load-theme theme t))
+
+;打包
+(provide 'theme-init)
