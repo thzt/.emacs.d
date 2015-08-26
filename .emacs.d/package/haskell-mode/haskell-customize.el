@@ -78,7 +78,7 @@ a per-project basis."
 ;; Configuration
 
 (defcustom haskell-doc-prettify-types t
-  "Replace some parts of types with Unicode characters like \"::\"
+  "Replace some parts of types with Unicode characters like \"∷\"
 when showing type information about symbols."
   :group 'haskell-doc
   :type 'boolean

@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/package/neotree")
 (require 'neotree)
 (global-set-key [C-f8] 'neotree-toggle)
+(global-set-key [C-f5] 'neotree-dir)
 
 ;安装支持的语言模式
 (dolist (language-mode '(["js2-mode" js2-mode "\\.js\\'" js2-mode]

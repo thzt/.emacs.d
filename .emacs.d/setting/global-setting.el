@@ -35,3 +35,6 @@
 
 ;把回答yes/no改成y/n
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;设置字符集
+(set-language-environment "UTF-8")
