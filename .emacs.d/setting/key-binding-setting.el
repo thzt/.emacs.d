@@ -26,5 +26,8 @@
 		  (interactive)
 		  (kill-buffer)))
 
+;设置选择区块的开始标志
+(global-set-key (kbd "C-<f1>") 'set-mark-command)
+
 ;打包
 (provide 'key-binding-setting)
