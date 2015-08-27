@@ -13,4 +13,4 @@
   (load-theme theme t))
 
 ;打包
-(provide 'theme-init)
+(provide 'theme-setting)

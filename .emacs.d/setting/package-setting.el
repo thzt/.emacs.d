@@ -1,16 +1,55 @@
-;增加包的搜索网址
-(require 'package)
-(add-to-list 'package-archives'
-	     ("elpa" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives'
-	     ("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives'
-	     ("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
+;启用词法作用域
+(setq lexical-binding t)
 
-;添加本地包安装路径
-(add-to-list 'load-path "~/.emacs.d/package/")
-(add-to-list 'load-path "~/.emacs.d/theme/")
+;安装undo-tree，C-/ undo，C-? redo
+(add-to-list 'load-path "~/.emacs.d/package/undo-tree")
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+;安装popup，auto-complete依赖项
+(add-to-list 'load-path "~/.emacs.d/package/popup")
+(require 'popup)
+
+;安装auto-complete
+(add-to-list 'load-path "~/.emacs.d/package/auto-complete")
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+;安装neotree
+(add-to-list 'load-path "~/.emacs.d/package/neotree")
+(require 'neotree)
+
+;安装支持的语言模式
+(dolist (language-mode '(
+			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
+			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
+			 ["python-mode" python "\\.py\\'" python-mode]
+			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
+			 ["php-mode" php-mode "\\.php\\'" php-mode]
+			 ["emmet-mode" emmet-mode "\\.html\\'" html-mode]
+			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
+			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]
+			 ))
+
+  (let ((folder-name (elt language-mode 0))
+	(package (elt language-mode 1))
+	(file (elt language-mode 2))
+	(mode (elt language-mode 3)))
+
+    ;添加包的安装路径
+    (add-to-list 'load-path 
+		 (concat "~/.emacs.d/package/" folder-name))
+
+    ;导入安装包
+    (require package)
+
+    ;对于.xx文件自动启用xx-mode
+    (add-to-list 'auto-mode-alist 
+	     `(,file . ,mode))))
+
+;按文件后缀自动加载emmet-mode，会整个替换html-mode，只能用html-mode-hook来做
+(add-hook 'html-mode-hook 'emmet-mode)
 
 ;打包
 (provide 'package-setting)

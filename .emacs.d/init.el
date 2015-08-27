@@ -2,9 +2,8 @@
 (add-to-list 'load-path "~/.emacs.d/setting/")
 
 (dolist (setting '(global-setting
-		   key-binding-setting
+		   theme-setting
 		   package-setting
-
-		   theme-init
-		   package-init))
+		   key-binding-setting
+		   ))
   (require setting))
