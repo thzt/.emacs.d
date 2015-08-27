@@ -1,6 +1,11 @@
 ;启用词法作用域
 (setq lexical-binding t)
 
+;安装maxframe
+;(add-to-list 'load-path "~/.emacs.d/package/maxframe")
+;(require 'maxframe)
+;(add-hook 'window-setup-hook 'maximize-frame t)
+
 ;安装undo-tree，C-/ undo，C-? redo
 (add-to-list 'load-path "~/.emacs.d/package/undo-tree")
 (require 'undo-tree)

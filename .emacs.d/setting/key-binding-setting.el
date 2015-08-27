@@ -26,16 +26,16 @@
 		  (interactive)
 		  (kill-buffer)))
 
-;打开EShell
-(global-set-key (kbd "<f12>") 'eshell)
-
 ;配置neotree快捷键
-;C-f5 定位到当前文件夹，q 隐藏neotree
-(global-set-key (kbd "C-<f5>") 
+;f5 定位到当前文件夹，q 隐藏neotree
+(global-set-key (kbd "<f5>") 
 		(lambda ()
 		  "Refresh neotree to show current directory."
 		  (interactive)
 		  (neotree-dir default-directory)))
+
+;打开EShell
+(global-set-key (kbd "<f12>") 'eshell)
 
 ;打包
 (provide 'key-binding-setting)
