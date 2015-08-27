@@ -1,6 +1,13 @@
 ;启用词法作用域
 (setq lexical-binding t)
 
+;安装undo-tree
+(add-to-list 'load-path "~/.emacs.d/package/undo-tree")
+(require 'undo-tree)
+(global-undo-tree-mode)
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-z") 'redo)
+
 ;安装popup，auto-complete依赖项
 (add-to-list 'load-path "~/.emacs.d/package/popup")
 (require 'popup)
@@ -29,6 +36,7 @@
 			 ["php-mode" php-mode "\\.php\\'" php-mode]
 			 ["emmet-mode" emmet-mode "\\.html\\'" html-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
+			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]
 			 ))
 
   (let ((folder-name (elt language-mode 0))

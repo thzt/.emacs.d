@@ -41,8 +41,7 @@
 (set-language-environment "UTF-8")
 
 ;设置窗体透明色，非常透明30，不透明100。(active,inactive)
-(set-frame-parameter (selected-frame) 
-		     'alpha '(100 30))
+;(set-frame-parameter (selected-frame) 'alpha '(100 30))
 
 ;打包
 (provide 'global-setting)
