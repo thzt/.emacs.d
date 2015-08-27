@@ -43,5 +43,8 @@
 ;设置窗体透明色，非常透明30，不透明100。(active,inactive)
 ;(set-frame-parameter (selected-frame) 'alpha '(100 30))
 
+;为了只启动一个Emacs实例，要启动server
+(server-start)
+
 ;打包
 (provide 'global-setting)

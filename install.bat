@@ -1,7 +1,12 @@
 @ echo off
 
-if exist %appdata%\.emacs.d (
-	rd %appdata%\.emacs.d /q/s 
+set emacsroot=%appdata%\.emacs.d
+
+if exist %emacsroot% (
+	rd %emacsroot% /q/s 
 )
 
-echo d | xcopy .emacs.d %appdata%\.emacs.d /q/e
+echo d | xcopy .emacs.d %emacsroot% /q/e
+
+md %emacsroot%\server
+takeown /f %emacsroot%\server
