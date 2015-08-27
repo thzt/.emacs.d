@@ -19,5 +19,12 @@
 ;打开EShell
 (global-set-key (kbd "C-<f12>") 'eshell)
 
+;关闭当前buffer
+(global-set-key (kbd "C-<f4>")
+		(lambda ()
+		  "Kill current buffer."
+		  (interactive)
+		  (kill-buffer)))
+
 ;打包
 (provide 'key-binding-setting)

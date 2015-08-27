@@ -24,6 +24,7 @@
 (global-set-key (kbd "C-<f8>") 'neotree-toggle)
 (global-set-key (kbd "C-<f5>") 
 		(lambda ()
+		  "Refresh neotree to show current directory."
 		  (interactive)
 		  (neotree-dir default-directory)))
 
