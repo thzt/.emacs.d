@@ -38,7 +38,10 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;设置字符集
-(set-language-environment "UTF-8")
+(set-language-environment 'utf-8)
+
+;解决设置了字符集为utf-8后，中文标题为乱码的问题。
+(set-file-name-coding-system 'gb18030)
 
 ;设置窗体透明色，非常透明30，不透明100。(active,inactive)
 ;(set-frame-parameter (selected-frame) 'alpha '(100 30))
