@@ -12,18 +12,28 @@
 (global-undo-tree-mode)
 
 ;安装popup，auto-complete依赖项
-(add-to-list 'load-path "~/.emacs.d/package/popup")
-(require 'popup)
+;(add-to-list 'load-path "~/.emacs.d/package/popup")
+;(require 'popup)
 
 ;安装auto-complete
-(add-to-list 'load-path "~/.emacs.d/package/auto-complete")
-(require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
+;(add-to-list 'load-path "~/.emacs.d/package/auto-complete")
+;(require 'auto-complete)
+;(require 'auto-complete-config)
+;(ac-config-default)
+
+;安装company-mode
+(add-to-list 'load-path "~/.emacs.d/package/company-mode")
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;安装neotree
 (add-to-list 'load-path "~/.emacs.d/package/neotree")
 (require 'neotree)
+
+;安装emmet-mode
+(add-to-list 'load-path "~/.emacs.d/package/emmet-mode")
+(require 'emmet-mode)
+(add-hook 'html-mode-hook 'emmet-mode)
 
 ;安装支持的语言模式
 (dolist (language-mode '(
@@ -32,7 +42,6 @@
 			 ["python-mode" python "\\.py\\'" python-mode]
 			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
 			 ["php-mode" php-mode "\\.php\\'" php-mode]
-			 ["emmet-mode" emmet-mode "\\.html\\'" html-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
 			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]
 			 ))
@@ -52,9 +61,6 @@
     ;对于.xx文件自动启用xx-mode
     (add-to-list 'auto-mode-alist 
 	     `(,file . ,mode))))
-
-;按文件后缀自动加载emmet-mode，会整个替换html-mode，只能用html-mode-hook来做
-(add-hook 'html-mode-hook 'emmet-mode)
 
 ;打包
 (provide 'package-setting)
