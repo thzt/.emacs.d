@@ -40,3 +40,8 @@ M-x list-packages
 
 删除上一个单词: M-BackSpace
 删除下一个单词: M-d
+
+显示所有buffer：C-mouse
+上一个buffer：C-x left
+下一个buffer：C-x right
+关闭当前buffer：C-x k
