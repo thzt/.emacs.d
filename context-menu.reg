@@ -5,3 +5,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\Open with Emacs\command]
 @="\"D:\\software\\emacs\\bin\\emacsclientw.exe\" -n -a \"D:\\software\\emacs\\bin\\runemacs.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Open with Emacs]
+"icon"="\"D:\\software\\emacs\\bin\\runemacs.exe\""
+  
+[HKEY_CLASSES_ROOT\Directory\shell\Open with Emacs\command]
+@="\"D:\\software\\emacs\\bin\\emacsclientw.exe\" -n -a \"D:\\software\\emacs\\bin\\runemacs.exe\" \"%1\""
