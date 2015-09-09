@@ -1,6 +1,9 @@
 ;启用词法作用域
 (setq lexical-binding t)
 
+;如果需要使用solarized-dark主题，需要设置background-mode为dark
+;(set-frame-parameter nil 'background-mode 'dark)
+
 ;设置主题
 ;zenburn Darkula solarized
 (let ((theme 'zenburn))
