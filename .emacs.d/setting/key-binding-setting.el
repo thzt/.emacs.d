@@ -37,5 +37,9 @@
 ;打开EShell
 (global-set-key (kbd "<f12>") 'eshell)
 
+;配置dash-at-point快捷键
+(global-set-key "\C-cd" 'dash-at-point)
+(global-set-key "\C-ce" 'dash-at-point-with-docset)
+
 ;打包
 (provide 'key-binding-setting)

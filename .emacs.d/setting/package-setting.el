@@ -35,6 +35,10 @@
 (require 'emmet-mode)
 (add-hook 'html-mode-hook 'emmet-mode)
 
+;安装dash-at-point
+(add-to-list 'load-path "~/.emacs.d/package/dash-at-point")
+(require 'dash-at-point)
+
 ;安装支持的语言模式
 (dolist (language-mode '(
 			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
