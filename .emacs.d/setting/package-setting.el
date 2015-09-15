@@ -39,6 +39,26 @@
 (add-to-list 'load-path "~/.emacs.d/package/dash-at-point")
 (require 'dash-at-point)
 
+;安装ag依赖的dash
+(add-to-list 'load-path "~/.emacs.d/package/dash")
+(require 'dash)
+
+;安装ag依赖的s
+(add-to-list 'load-path "~/.emacs.d/package/s")
+(require 's)
+
+;安装ag
+(add-to-list 'load-path "~/.emacs.d/package/ag")
+(require 'ag)
+
+;安装helm-ag依赖的helm
+(add-to-list 'load-path "~/.emacs.d/package/helm")
+(require 'helm)
+
+;安装helm-ag
+(add-to-list 'load-path "~/.emacs.d/package/helm-ag")
+(require 'helm-ag)
+
 ;安装支持的语言模式
 (dolist (language-mode '(
 			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
