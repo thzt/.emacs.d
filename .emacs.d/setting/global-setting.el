@@ -43,6 +43,9 @@
 ;解决设置了字符集为utf-8后，中文标题为乱码的问题。
 (set-file-name-coding-system 'gb18030)
 
+;减小鼠标滚动速度
+(setq mouse-wheel-progressive-speed nil)
+
 ;设置窗体透明色，非常透明30，不透明100。(active,inactive)
 ;(set-frame-parameter (selected-frame) 'alpha '(100 30))
 
