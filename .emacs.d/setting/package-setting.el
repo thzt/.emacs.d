@@ -59,6 +59,17 @@
 (add-to-list 'load-path "~/.emacs.d/package/helm-ag")
 (require 'helm-ag)
 
+;把D:\software\emacs\bin\ag.exe或/user/local/bin/ag加入elisp环境变量
+(let* ((ag-path (if (eq system-type 'windows-nt)
+		    "D:\\software\\emacs\\bin"
+		  "/usr/local/bin"))
+       (ag-path-with-separator (if (eq system-type 'windows-nt)
+				   (concat ag-path ";")
+				 (concat ag-path ":"))))
+  
+       (setenv "PATH" (concat ag-path-with-separator (getenv "PATH")))
+       (setq exec-path (cons ag-path exec-path)))
+
 ;安装支持的语言模式
 (dolist (language-mode '(
 			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
