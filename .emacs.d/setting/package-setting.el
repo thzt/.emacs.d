@@ -1,6 +1,14 @@
 ;启用词法作用域
 (setq lexical-binding t)
 
+;安装exec-path-from-shell
+(add-to-list 'load-path "~/.emacs.d/package/exec-path-from-shell")
+(require 'exec-path-from-shell)
+
+;在mac os x中，从shell中同步exec-path
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;安装maxframe
 ;(add-to-list 'load-path "~/.emacs.d/package/maxframe")
 ;(require 'maxframe)
@@ -59,16 +67,10 @@
 (add-to-list 'load-path "~/.emacs.d/package/helm-ag")
 (require 'helm-ag)
 
-;把D:\software\emacs\bin\ag.exe或/user/local/bin/ag加入elisp环境变量
-(let* ((ag-path (if (eq system-type 'windows-nt)
-		    "D:\\software\\emacs\\bin"
-		  "/usr/local/bin"))
-       (ag-path-with-separator (if (eq system-type 'windows-nt)
-				   (concat ag-path ";")
-				 (concat ag-path ":"))))
-  
-       (setenv "PATH" (concat ag-path-with-separator (getenv "PATH")))
-       (setq exec-path (cons ag-path exec-path)))
+;在windows操作系统中，需要把D:\software\emacs\bin\ag.exe加入环境变量
+(when (memq window-system '(w32))
+  (setenv "PATH" (concat "D:\\software\\emacs\\bin;" (getenv "PATH")))
+  (setq exec-path (cons "D:\\software\\emacs\\bin" exec-path)))
 
 ;安装支持的语言模式
 (dolist (language-mode '(
