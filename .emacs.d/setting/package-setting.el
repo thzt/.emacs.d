@@ -38,11 +38,6 @@
 (add-to-list 'load-path "~/.emacs.d/package/neotree")
 (require 'neotree)
 
-;安装emmet-mode
-(add-to-list 'load-path "~/.emacs.d/package/emmet-mode")
-(require 'emmet-mode)
-(add-hook 'html-mode-hook 'emmet-mode)
-
 ;安装dash-at-point
 (add-to-list 'load-path "~/.emacs.d/package/dash-at-point")
 (require 'dash-at-point)
@@ -80,7 +75,8 @@
 			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
 			 ["php-mode" php-mode "\\.php\\'" php-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
-			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]
+			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]			 
+			 ["web-mode" web-mode "\\.html\\'" web-mode]
 			 ))
 
   (let ((folder-name (elt language-mode 0))
@@ -97,7 +93,12 @@
 
     ;对于.xx文件自动启用xx-mode
     (add-to-list 'auto-mode-alist 
-	     `(,file . ,mode))))
+				 `(,file . ,mode))))
+
+;安装emmet-mode
+(add-to-list 'load-path "~/.emacs.d/package/emmet-mode")
+(require 'emmet-mode)
+(add-hook 'web-mode-hook 'emmet-mode)
 
 ;打包
 (provide 'package-setting)

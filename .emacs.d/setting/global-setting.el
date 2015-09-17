@@ -49,6 +49,9 @@
 ;设置窗体透明色，非常透明30，不透明100。(active,inactive)
 ;(set-frame-parameter (selected-frame) 'alpha '(100 30))
 
+;设置tab缩进为4个字符
+(setq default-tab-width 4)
+
 ;为了只启动一个Emacs实例，要启动server
 (server-start)
 
