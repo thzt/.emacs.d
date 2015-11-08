@@ -39,8 +39,10 @@ M-x list-packages
 下一页: C-v
 上一页: M-v
 
-删除上一个单词: M-BackSpace
-删除下一个单词: M-d
+剪切上一个单词: M-BackSpace
+剪切下一个单词: M-d
+剪切光标到行尾: C-k
+删除下一个字符: C-d
 
 显示所有buffer：C-mouse
 上一个buffer：C-x left
