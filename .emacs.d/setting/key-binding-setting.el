@@ -27,7 +27,7 @@
 		  (kill-buffer)))
 
 ;配置neotree快捷键
-;f5 定位到当前文件夹，q 隐藏neotree
+;C-f5 定位到当前文件夹，q 隐藏neotree
 (global-set-key (kbd "C-<f5>") 
 		(lambda ()
 		  "Refresh neotree to show current directory."
@@ -40,6 +40,9 @@
 ;配置dash-at-point快捷键
 (global-set-key "\C-cd" 'dash-at-point)
 (global-set-key "\C-ce" 'dash-at-point-with-docset)
+
+;配置ace-jump-mode快捷键
+(global-set-key (kbd "C-<f6>") 'ace-jump-word-mode)
 
 ;打包
 (provide 'key-binding-setting)

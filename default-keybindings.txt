@@ -48,3 +48,5 @@ M-x list-packages
 上一个buffer：C-x left
 下一个buffer：C-x right
 关闭当前buffer：C-x k
+
+跳转到指定行： M-g g

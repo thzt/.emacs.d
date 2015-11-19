@@ -67,6 +67,10 @@
   (setenv "PATH" (concat "D:\\software\\emacs\\bin;" (getenv "PATH")))
   (setq exec-path (cons "D:\\software\\emacs\\bin" exec-path)))
 
+;安装ace-jump-mode
+(add-to-list 'load-path "~/.emacs.d/package/ace-jump-mode")
+(require 'ace-jump-mode)
+
 ;安装支持的语言模式
 (dolist (language-mode '(
 			 ["js2-mode" js2-mode "\\.js\\'" js2-mode]
