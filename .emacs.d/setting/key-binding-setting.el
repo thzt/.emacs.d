@@ -34,15 +34,23 @@
 		  (interactive)
 		  (neotree-dir default-directory)))
 
-;打开EShell
-(global-set-key (kbd "C-<f12>") 'eshell)
+;配置ace-jump-mode快捷键，查询当前文件
+;(global-set-key (kbd "C-<f6>") 'ace-jump-word-mode)
 
-;配置dash-at-point快捷键
+;查询目录
+(global-set-key (kbd "C-<f6>")
+		(lambda ()
+		  "Search content in current directory."
+		  (interactive)
+		  (helm-ag)))
+
+
+;配置dash-at-point快捷键，查询dash文档
 (global-set-key (kbd "C-<f7>") 'dash-at-point)
 ;(global-set-key "\C-ce" 'dash-at-point-with-docset)
 
-;配置ace-jump-mode快捷键
-(global-set-key (kbd "C-<f6>") 'ace-jump-word-mode)
+;打开EShell
+(global-set-key (kbd "C-<f12>") 'eshell)
 
 ;打包
 (provide 'key-binding-setting)

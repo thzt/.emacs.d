@@ -68,8 +68,8 @@
   (setq exec-path (cons "D:\\software\\emacs\\bin" exec-path)))
 
 ;安装ace-jump-mode
-(add-to-list 'load-path "~/.emacs.d/package/ace-jump-mode")
-(require 'ace-jump-mode)
+;(add-to-list 'load-path "~/.emacs.d/package/ace-jump-mode")
+;(require 'ace-jump-mode)
 
 ;安装支持的语言模式
 (dolist (language-mode '(
