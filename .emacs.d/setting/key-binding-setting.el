@@ -38,8 +38,8 @@
 (global-set-key (kbd "C-<f12>") 'eshell)
 
 ;配置dash-at-point快捷键
-(global-set-key "\C-cd" 'dash-at-point)
-(global-set-key "\C-ce" 'dash-at-point-with-docset)
+(global-set-key (kbd "C-<f7>") 'dash-at-point)
+;(global-set-key "\C-ce" 'dash-at-point-with-docset)
 
 ;配置ace-jump-mode快捷键
 (global-set-key (kbd "C-<f6>") 'ace-jump-word-mode)
