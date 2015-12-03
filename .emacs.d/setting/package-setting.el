@@ -80,7 +80,8 @@
 			 ["php-mode" php-mode "\\.php\\'" web-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
 			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]			 
-			 ["web-mode" web-mode "\\.html\\'" web-mode]
+			 ["web-mode" web-mode "\\.html\\'" web-mode]			 
+			 ["emacs-tss" typescript "\\.ts\\'" typescript-mode]
 			 ))
 
   (let ((folder-name (elt language-mode 0))
