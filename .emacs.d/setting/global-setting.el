@@ -41,7 +41,9 @@
 (set-language-environment 'utf-8)
 
 ;解决设置了字符集为utf-8后，中文标题为乱码的问题。
-(set-file-name-coding-system 'gb18030)
+;windows系统上，需要设置file-name编码。但是mac上不能这样设置，否则会导致neotree显示中文乱码。
+(if (eq system-type 'windows-nt)
+	(set-file-name-coding-system 'gb18030))
 
 ;减小鼠标滚动速度
 (setq mouse-wheel-progressive-speed nil)
