@@ -49,6 +49,9 @@
 (global-set-key (kbd "C-<f7>") 'dash-at-point)
 ;(global-set-key "\C-ce" 'dash-at-point-with-docset)
 
+;为markdown-mode markdown-export-and-preview（C-c C-c v），重新绑定快捷键
+(global-set-key (kbd "C-<f9>") 'markdown-export-and-preview)
+
 ;打开EShell
 (global-set-key (kbd "C-<f12>") 'eshell)
 
