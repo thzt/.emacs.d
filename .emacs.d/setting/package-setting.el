@@ -77,10 +77,9 @@
 			 ["markdown-mode" markdown-mode "\\.md\\'" markdown-mode]
 			 ["python-mode" python "\\.py\\'" python-mode]
 			 ["haskell-mode" haskell "\\.hs\\'" haskell-mode]
-			 ["php-mode" php-mode "\\.php\\'" web-mode]
 			 ["scala-mode2" scala-mode2 "\\.scala\\'" scala-mode]
 			 ["scss-mode" scss-mode "\\.scss\\'" scss-mode]			 
-			 ["web-mode" web-mode "\\.html\\'" web-mode]			 
+			 ["web-mode" web-mode "\\.html\\|.vm\\|.php\\'" web-mode]			 
 			 ["emacs-tss" typescript "\\.ts\\'" typescript-mode]
 			 ))
 
@@ -104,6 +103,10 @@
 (add-to-list 'load-path "~/.emacs.d/package/emmet-mode")
 (require 'emmet-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
+
+(add-to-list 'load-path "~/.emacs.d/package/vtl-mode")
+(require 'vtl)
+(add-hook 'web-mode-hook 'vtl-mode)
 
 ;打包
 (provide 'package-setting)
